@@ -22,7 +22,7 @@ import java.util.Random;
  * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags        (PSYoungGen + ParOldGen)
  * 
  * 5
- * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+UseConcMarkSweepGC    (par new generation + concurrent)
+ * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+UseConcMarkSweepGC    (par new generation + concurrent mark-sweep)
  * 
  * 6
  * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+UseG1GC    后面单独讲解G1
@@ -33,9 +33,9 @@ import java.util.Random;
  * 下面是故意繁琐配置，主要是为了学习，一般生产环境不这么配置：
  * 下面是故意繁琐配置，主要是为了学习，一般生产环境不这么配置：
  * 下面是故意繁琐配置，主要是为了学习，一般生产环境不这么配置：
- * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+UseParallelGC -XX:+UseParallelOldGC    ()
+ * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+UseParallelGC -XX:+UseParallelOldGC    (PSYoungGen + ParOldGen)
  * 
- * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+ParNewGC -XX:+UseConcMarkSweepGC    ()
+ * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+ParNewGC -XX:+UseConcMarkSweepGC    (par new generation + concurrent mark-sweep generation)
  */
 public class GCDemo {
 
